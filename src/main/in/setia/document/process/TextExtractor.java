@@ -62,6 +62,24 @@ public class TextExtractor {
 		converter.convert(new File(inputFile), new File(outputFile));
 	}
 	
+	//	@SuppressWarnings("unchecked")
+	public void convertToPDF(String inputFile, String outputFile, String pwd) throws IOException {
+		// create a PDF DocumentFormat (as normally configured in document-formats.xml)
+		DocumentFormat customPdfFormat = new DocumentFormat("Portable Document DateFormatProcesser", "application/pdf", "pdf");
+		customPdfFormat.setExportFilter(DocumentFamily.TEXT, "writer_pdf_Export");
+		System.out.println("Password is "+pwd);
+		// now set our custom options
+		Map<String, Object> pdfOptions = new HashMap<String, Object>();
+		pdfOptions.put("EncryptFile", Boolean.TRUE);
+		if(pwd!=null)
+			pdfOptions.put("DocumentOpenPassword", pwd);
+		customPdfFormat.setExportOption(DocumentFamily.TEXT, "FilterData", pdfOptions);
+
+
+     	DocumentConverter converter = new OpenOfficeDocumentConverter(getConnection());  	
+		converter.convert(new File(inputFile), new File(outputFile), customPdfFormat);
+    }
+
 
 //	public void convertDocumentToPDF(String inputFile, String outputFile, String pwd) throws IOException {
 //		// create a PDF DocumentFormat (as normally configured in document-formats.xml)
