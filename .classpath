@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="output" path="bin"/>
 	<classpathentry kind="src" path="src/main/java"/>
 	<classpathentry kind="src" path="src/main/resources"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER" exported="true"/>
-	<classpathentry kind="lib" path="C:/Users/IBM_ADMIN/Documents/workspaces/github/document-processor/lib/bootstrapconnector.jar" exported="true"/>
-	<classpathentry kind="lib" path="C:/Users/IBM_ADMIN/Documents/workspaces/github/document-processor/lib/commons-cli-1.1.jar" exported="true"/>
-	<classpathentry kind="lib" path="C:/Users/IBM_ADMIN/Documents/workspaces/github/document-processor/lib/commons-io-1.4.jar" exported="true"/>
-	<classpathentry kind="lib" path="C:/Users/IBM_ADMIN/Documents/workspaces/github/document-processor/lib/jodconverter-core-3.0-beta-3.jar" exported="true"/>
-	<classpathentry kind="lib" path="C:/Users/IBM_ADMIN/Documents/workspaces/github/document-processor/lib/json-20080701.jar" exported="true"/>
-	<classpathentry kind="lib" path="C:/Users/IBM_ADMIN/Documents/workspaces/github/document-processor/lib/juh-3.1.0.jar" exported="true"/>
-	<classpathentry kind="lib" path="C:/Users/IBM_ADMIN/Documents/workspaces/github/document-processor/lib/jurt-3.1.0.jar" exported="true"/>
-	<classpathentry kind="lib" path="C:/Users/IBM_ADMIN/Documents/workspaces/github/document-processor/lib/ridl-3.1.0.jar" exported="true"/>
-	<classpathentry kind="lib" path="C:/Users/IBM_ADMIN/Documents/workspaces/github/document-processor/lib/unoil-3.1.0.jar" exported="true"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/bootstrapconnector.jar"/>
+	<classpathentry kind="lib" path="lib/jodconverter-core-3.0-beta-3.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
 </classpath>
