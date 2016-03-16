@@ -3,7 +3,7 @@ apply plugin: 'eclipse'
 
 repositories {
 	flatDir {
-		dirs 'C:/Users/IBM_ADMIN/Documents/workspaces/mygithub/document-processor/lib'
+		dirs 'lib'
 	}
 }
 
