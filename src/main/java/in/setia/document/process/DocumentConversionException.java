@@ -11,5 +11,9 @@ public class DocumentConversionException extends Exception {
 	public DocumentConversionException(Exception ex){
 		super(ex);
 	}
+	
+	public DocumentConversionException(String msg, Exception ex){
+		super(msg, ex);
+	}
 
 }
