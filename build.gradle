@@ -1,29 +1,29 @@
 apply plugin: 'java'
-//apply plugin: 'findbugs'
-//apply plugin: 'pmd'
+apply plugin: 'findbugs'
+apply plugin: 'pmd'
 apply plugin: 'eclipse'
 
-//repositories {
-  //  flatDir {
-    //    dirs 'C:/Users/IBM_ADMIN/Documents/TOOLS/pmd-bin-5.1.3/lib'
-     //   dirs 'C:/Users/IBM_ADMIN/Documents/TOOLS/Find Bugs/lib'
-    //}
-//}
+repositories {
+    flatDir {
+       dirs 'C:/Users/IBM_ADMIN/Documents/TOOLS/pmd-bin-5.1.3/lib'
+       dirs 'C:/Users/IBM_ADMIN/Documents/TOOLS/Find Bugs/lib'
+    }
+}
 
 dependencies {
 	compile fileTree(dir: 'lib', include: '*.jar')
-//	pmd ("net.sourceforge.pmd:pmd:5.1.3")
-//	pmd fileTree(dir: 'C:/Users/IBM_ADMIN/Documents/TOOLS/pmd-bin-5.1.3/lib', include: '*.jar')
-//	findbugs fileTree(dir: 'C:/Users/IBM_ADMIN/Documents/TOOLS/Find Bugs/lib', include: '*.jar')
+	pmd ("net.sourceforge.pmd:pmd:5.1.3")
+	pmd fileTree(dir: 'C:/Users/IBM_ADMIN/Documents/TOOLS/pmd-bin-5.1.3/lib', include: '*.jar')
+	findbugs fileTree(dir: 'C:/Users/IBM_ADMIN/Documents/TOOLS/Find Bugs/lib', include: '*.jar')
 }
 
-//pmd {
-//	ignoreFailures = true
-//}
+pmd {
+	ignoreFailures = true
+}
 
-//findbugs {
-//	ignoreFailures = true
-//}
+findbugs {
+	ignoreFailures = true
+}
 
 task listJars << {
 	println "All runtime jars being listed..."
